@@ -5,3 +5,5 @@ all:
 	g++ -c Registry/Registry.cpp -o build/registry.o
 	g++ build/main.o build/PkgUrl.o build/downloader.o build/registry.o -lcurl -o build/main
 
+run:
+	./build/main
