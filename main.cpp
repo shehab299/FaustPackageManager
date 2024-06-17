@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Registry/Registry.h"
+#include "Registry.h"
 
 int main(int argc, char const *argv[])
 {

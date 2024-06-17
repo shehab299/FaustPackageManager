@@ -1,5 +1,5 @@
 #include "GithubDownloader.h"
-#include "../Exceptions/DownloadException.h"
+#include "DownloadException.h"
 #include <filesystem>
 #include <curl/curl.h>
 #include <iostream>

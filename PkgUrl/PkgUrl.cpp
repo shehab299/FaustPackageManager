@@ -1,6 +1,6 @@
 #include "PkgUrl.h"
 #include <regex>
-#include "../Exceptions/PkgUrlExcption.h"
+#include "PkgUrlExcption.h"
 
 PkgUrl::PkgUrl(std::string url)
 {
