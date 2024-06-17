@@ -17,4 +17,5 @@ public:
     std::string getVersion() const;
     std::string getAuthor() const;
     std::string getLibraryName() const;
+    std::string getPath() const;
 };

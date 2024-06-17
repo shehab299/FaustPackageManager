@@ -1,6 +1,6 @@
 #include "PkgUrl.h"
 #include <regex>
-#include "PkgUrlExcption.h"
+#include "../Exceptions/PkgUrlExcption.h"
 
 PkgUrl::PkgUrl(std::string url)
 {
@@ -36,4 +36,19 @@ std::string PkgUrl::getLibraryName() const{
 
 std::string PkgUrl::getVersion() const {
     return this->version;
+}
+
+std::string PkgUrl::getPath() const {
+
+    std::string path = "";
+
+    if(!author.empty()){
+        path += author + "/";
+    }
+
+    path += libName + "/";
+    path += version + "/";
+    path += libName;
+
+    return path;
 }
