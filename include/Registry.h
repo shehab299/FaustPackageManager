@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Registry.h"
-#include "../Downloader/GithubDownloader.h"
+#include "GithubDownloader.h"
 #include <string>
 
 class Registry{

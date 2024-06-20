@@ -1,5 +1,5 @@
 #include "Registry.h"
-#include "../PkgUrl/PkgUrl.h"
+#include "PkgUrl.h"
 #include <iostream>
 #include <filesystem>
 #include <stdexcept>

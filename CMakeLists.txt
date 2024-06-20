@@ -7,14 +7,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 find_package(CURL REQUIRED)
 
-add_subdirectory(Downloader)
-add_subdirectory(PkgUrl)
-add_subdirectory(Exceptions)
 
 
-add_executable(main main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/Registry/Registry.cpp)
+file(GLOB_RECURSE SRC_FILES src/*.cpp)
+add_executable(main ${SRC_FILES})
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Registry)
-include_directories(${CURL_INCLUDE_DIR})
-target_link_libraries(main PUBLIC downloader pkgurl ${CURL_LIBRARIES})
-
+target_include_directories(main PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(main PUBLIC ${CURL_LIBRARIES})
